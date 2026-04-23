@@ -84,8 +84,9 @@ func _physics_process(delta: float) -> void:
 		velocity += get_gravity() * delta
 	
 	# Movement System
+	var input_dir: Vector2
 	if CAN_CONTROL:
-		var input_dir := Input.get_vector("left", "right", "forward", "backward")
+		input_dir = Input.get_vector("left", "right", "forward", "backward")
 		direction = (head.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 		if direction.length() > 0:
 			velocity.x = direction.x * current_speed
@@ -95,8 +96,12 @@ func _physics_process(delta: float) -> void:
 			velocity.z = lerp(velocity.z, direction.z * current_speed, delta * 7.0)
 	
 	# Head Bob
-	t_bob += delta * velocity.length() * float(is_on_floor())
-	camera.transform.origin = _headbob(t_bob)
+	if input_dir.length() > 0.1 and is_on_floor():
+		t_bob += delta * current_speed
+		var bob = _headbob(t_bob)
+		camera.transform.origin.y = lerp(camera.transform.origin.y, bob.y, delta * 10.0)
+	else:
+		camera.transform.origin = camera.transform.origin.lerp(Vector3.ZERO, delta * 3.0)
 	
 	# Enable or Disable HUD
 	if SHOW_HUD:
