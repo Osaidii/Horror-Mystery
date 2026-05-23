@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bt6kpgnchnlrn" path="res://assets/Domain 1/Wall 1.glb" id="2_66xqt"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_u7lew"]
-size = Vector3(0.17047119, 2.9784546, 3.9799805)
+size = Vector3(0.2572174, 2.9784546, 3.9799805)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hn6an"]
 size = Vector3(5.405033, 3.001709, 3.9749756)
@@ -20,7 +20,7 @@ aabb = AABB(-0.11306856, -1.5284098, -2.0773644, 0.2134418, 3.0568197, 4.154729)
 [node name="Static" type="StaticBody3D" parent="." unique_id=1203729659]
 
 [node name="Collision" type="CollisionShape3D" parent="Static" unique_id=237044654]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13687134, 1.499115, 1.4748535)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.026023865, 1.499115, 1.4748535)
 shape = SubResource("BoxShape3D_u7lew")
 disabled = true
 

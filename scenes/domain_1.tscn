@@ -25,7 +25,7 @@ glow_enabled = true
 size = Vector3(1, 0.8847656, 0.103027344)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_h7lqk"]
-size = Vector3(1, 0.8105469, 0.9923096)
+size = Vector3(1, 0.8105469, 0.07962799)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wlb4j"]
 size = Vector3(0.001, 0.9121094, 1)
@@ -33,13 +33,25 @@ size = Vector3(0.001, 0.9121094, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_be7q5"]
 size = Vector3(56.763, 4.8721924, 0.001)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4wxng"]
-albedo_color = Color(0.42172217, 0.41609946, 0.123776145, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_be7q5"]
+albedo_color = Color(0.557844, 0.547912, 0.17875746, 1)
 emission_enabled = true
-emission = Color(0.6431373, 0.54509807, 0.22352941, 1)
-emission_energy_multiplier = 0.48
+emission = Color(0.3963156, 0.3573256, 0.17642298, 1)
+emission_energy_multiplier = 0.84
 
 [sub_resource type="BoxMesh" id="BoxMesh_ua7vj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4wxng"]
+albedo_color = Color(0.557844, 0.547912, 0.17875746, 1)
+emission_enabled = true
+emission = Color(0.50443345, 0.42469314, 0.16165042, 1)
+emission_energy_multiplier = 0.48
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lf0kl"]
+albedo_color = Color(0.557844, 0.547912, 0.17875746, 1)
+emission_enabled = true
+emission = Color(0.39607844, 0.35686275, 0.1764706, 1)
+emission_energy_multiplier = 0.84
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h7lqk"]
 albedo_texture = ExtResource("3_wlb4j")
@@ -50,6 +62,38 @@ uv1_triplanar = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_lf0kl"]
 
+[sub_resource type="Animation" id="Animation_be7q5"]
+resource_name = "intro"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lf0kl"]
+_data = {
+&"intro": SubResource("Animation_be7q5")
+}
+
 [node name="Domain 1" type="Node3D" unique_id=446684211]
 
 [node name="Environment" type="WorldEnvironment" parent="." unique_id=838168955]
@@ -57,6 +101,7 @@ environment = SubResource("Environment_be7q5")
 
 [node name="Player" parent="." unique_id=989809469 instance=ExtResource("2_w6yah")]
 transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, -3.1933453, 2.892228, 0.39259648)
+FLASH_LIGHT_UNLOCKED = false
 
 [node name="Level Design" type="Node3D" parent="." unique_id=266344266]
 
@@ -265,7 +310,7 @@ shape = SubResource("BoxShape3D_be7q5")
 
 [node name="Mesh" type="MeshInstance3D" parent="Level Design/Hallway 1/Roof" unique_id=662830934]
 transform = Transform3D(57.770252, 0, 0, 0, 4.976886, 1.7763568e-15, 0, 0, 0.17714688, -6.34552, -0.6036303, -0.044437885)
-material_override = SubResource("StandardMaterial3D_4wxng")
+material_override = SubResource("StandardMaterial3D_be7q5")
 mesh = SubResource("BoxMesh_ua7vj")
 
 [node name="Floor" type="Node3D" parent="Level Design/Hallway 1" unique_id=1623272152]
@@ -292,17 +337,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.995735, 1.194, -1.225)
 [node name="3" parent="Level Design/Hallway 1/Appearing Walls" unique_id=1304425347 instance=ExtResource("4_h7lqk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.348711, 1.1937141, -1.2245408)
 
-[node name="4" parent="Level Design/Hallway 1/Appearing Walls" unique_id=1490197920 instance=ExtResource("4_h7lqk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.698273, 1.1937141, -1.2245408)
+[node name="4" parent="Level Design/Hallway 1/Appearing Walls" unique_id=42188380 instance=ExtResource("4_h7lqk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.742748, 1.1937141, -1.2245408)
 
-[node name="5" parent="Level Design/Hallway 1/Appearing Walls" unique_id=1267336142 instance=ExtResource("4_h7lqk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.59603, 1.1937141, -1.2245408)
+[node name="5" parent="Level Design/Hallway 1/Appearing Walls" unique_id=1544344014 instance=ExtResource("4_h7lqk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.903625, 1.1937141, -1.2245408)
 
-[node name="6" parent="Level Design/Hallway 1/Appearing Walls" unique_id=1617503322 instance=ExtResource("4_h7lqk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.36746, 1.1937141, -1.2245408)
+[node name="Opening Walls" type="Node3D" parent="Level Design/Hallway 1" unique_id=1853407162]
 
-[node name="7" parent="Level Design/Hallway 1/Appearing Walls" unique_id=1428694424 instance=ExtResource("4_h7lqk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.752586, 1.1937141, -1.2245408)
+[node name="1" parent="Level Design/Hallway 1/Opening Walls" unique_id=250807472 instance=ExtResource("5_be7q5")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 8.12377, 1.2060231, 1.9354125)
+
+[node name="2" parent="Level Design/Hallway 1/Opening Walls" unique_id=1647433194 instance=ExtResource("5_be7q5")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 52.01464, 1.2060231, 1.9354125)
 
 [node name="Hallway 2" type="Node3D" parent="Level Design" unique_id=2063713704]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 54.482975, 0, -1.8143224)
@@ -332,7 +379,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.36598313)
 transform = Transform3D(-6.2944396e-09, 0, 56.601, 0, 3.974, 0, -0.144, 0, -2.4741084e-06, 23.533346, 2.9744167, 2.4668355)
 
 [node name="Collision" type="CollisionShape3D" parent="Level Design/Hallway 2/Wall 2/StaticBody3D" unique_id=624902744]
-transform = Transform3D(0.9999785, 0, 0, 0, 1, 0, 9.020562e-17, 0, 0.99998105, 0.65259933, -0.044921637, 0.0003426373)
+transform = Transform3D(0.9999787, 0, 0, 0, 1.0000092, 0, 9.020563e-17, 0, 0.99998105, 0.6525574, -0.044921637, 0.07776427)
+shape = SubResource("BoxShape3D_h7lqk")
+
+[node name="Collision2" type="CollisionShape3D" parent="Level Design/Hallway 2/Wall 2/StaticBody3D" unique_id=1500357339]
+transform = Transform3D(0.9999787, 0, 0, 0, 1.0000484, 0, 9.020563e-17, 0, 0.99998105, 0.65249634, -0.044921637, -0.45610762)
 shape = SubResource("BoxShape3D_h7lqk")
 
 [node name="Meshes" type="Node3D" parent="Level Design/Hallway 2/Wall 2" unique_id=1514193914]
@@ -504,7 +555,7 @@ shape = SubResource("BoxShape3D_be7q5")
 
 [node name="Mesh" type="MeshInstance3D" parent="Level Design/Hallway 2/Roof" unique_id=1759528607]
 transform = Transform3D(57.770252, 0, 0, 0, 4.976886, 1.7763568e-15, 0, 0, 0.17714688, -6.34552, -0.6036303, -0.044437885)
-material_override = SubResource("StandardMaterial3D_4wxng")
+material_override = SubResource("StandardMaterial3D_lf0kl")
 mesh = SubResource("BoxMesh_ua7vj")
 
 [node name="Floor" type="Node3D" parent="Level Design/Hallway 2" unique_id=259284758]
@@ -523,6 +574,9 @@ mesh = SubResource("BoxMesh_ua7vj")
 
 [node name="Appearing Walls" type="Node3D" parent="Level Design/Hallway 2" unique_id=815061442]
 
+[node name="1" parent="Level Design/Hallway 2/Appearing Walls" unique_id=959532627 instance=ExtResource("4_h7lqk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.1467257, 1.1937141, -1.2627106)
+
 [node name="Testing Grounds" type="MeshInstance3D" parent="." unique_id=6704151]
 transform = Transform3D(14.79704, 0, 0, 0, 0.11756289, 0, 0, 0, 16.536285, -15.876214, 0, 0)
 material_override = SubResource("StandardMaterial3D_h7lqk")
@@ -533,5 +587,5 @@ mesh = SubResource("BoxMesh_be7q5")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Testing Grounds/StaticBody3D" unique_id=238620271]
 shape = SubResource("BoxShape3D_lf0kl")
 
-[node name="Opening Wall" parent="." unique_id=250807472 instance=ExtResource("5_be7q5")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 8.12377, 1.2060231, 1.9354125)
+[node name="Cutscene" type="AnimationPlayer" parent="." unique_id=89606268]
+libraries/ = SubResource("AnimationLibrary_lf0kl")

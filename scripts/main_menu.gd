@@ -17,30 +17,30 @@ func _ready() -> void:
 
 func _on_intro_pressed() -> void:
 	Transition.scene_out()
-	await get_tree().create_timer(1.0).timeout
+	await get_tree().create_timer(0.5).timeout
 	get_tree().change_scene_to_packed(INTRO)
 
 func _on_domain_1_pressed() -> void:
 	Transition.scene_out()
-	await get_tree().create_timer(1.0).timeout
+	await get_tree().create_timer(0.5).timeout
 	get_tree().change_scene_to_packed(DOMAIN_1)
 
 func _on_domain_2_pressed() -> void:
 	Transition.scene_out()
-	await get_tree().create_timer(1.0).timeout
+	await get_tree().create_timer(0.5).timeout
 	get_tree().change_scene_to_packed(DOMAIN_2)
 
 func _on_domain_3_pressed() -> void:
 	Transition.scene_out()
-	await get_tree().create_timer(1.0).timeout
+	await get_tree().create_timer(0.5).timeout
 	get_tree().change_scene_to_packed(DOMAIN_3)
 
 func _on_credits_pressed() -> void:
 	Transition.scene_out()
-	await get_tree().create_timer(1.0).timeout
+	await get_tree().create_timer(0.5).timeout
 	get_tree().change_scene_to_packed(CREDITS)
 
 func _on_play_pressed() -> void:
 	Transition.scene_out()
-	await get_tree().create_timer(1.0).timeout
-	get_tree().change_scene_to_packed(INTRO)	
+	await get_tree().create_timer(0.5).timeout
+	get_tree().change_scene_to_packed(INTRO)

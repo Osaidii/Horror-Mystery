@@ -48,6 +48,7 @@ var direction: Vector3
 func _ready() -> void:
 	# No Mouse
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	Transition.reset()
 	
 	# Set Global Variables
 	Shortcuts.flash_light_unlocked = FLASH_LIGHT_UNLOCKED

@@ -9,3 +9,6 @@ func scene_in() -> void:
 func scene_out() -> void:
 	visible = true
 	transition_player.play("out")
+
+func reset() -> void:
+	visible = false

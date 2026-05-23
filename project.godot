@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="horizons"
-run/main_scene="uid://wqtcsy2ienoj"
+run/main_scene="uid://cgf5utxk38gyd"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
