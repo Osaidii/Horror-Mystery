@@ -22,7 +22,6 @@ aabb = AABB(-0.11306856, -1.5284098, -2.0773644, 0.2134418, 3.0568197, 4.154729)
 [node name="Collision" type="CollisionShape3D" parent="Static" unique_id=237044654]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.026023865, 1.499115, 1.4748535)
 shape = SubResource("BoxShape3D_u7lew")
-disabled = true
 
 [node name="Meshes" type="Node3D" parent="." unique_id=2145776920]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.489)

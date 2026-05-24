@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cj7etkoswv171"
+path="res://.godot/imported/Ending Song LSPLASH.mp3-cd7ce0c39f7985cbc90c8f2fc9b06429.mp3str"
+
+[deps]
+
+source_file="res://assets/Sounds/Ending Song LSPLASH.mp3"
+dest_files=["res://.godot/imported/Ending Song LSPLASH.mp3-cd7ce0c39f7985cbc90c8f2fc9b06429.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
